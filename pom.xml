@@ -49,9 +49,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/confluentinc/common.git</connection>
-        <developerConnection>scm:git:git@github.com:confluentinc/common.git</developerConnection>
-        <url>https://github.com/confluentinc/common</url>
+        <connection>scm:git:git://github.com/cotedm/common.git</connection>
+        <developerConnection>scm:git:git@github.com:cotedm/common.git</developerConnection>
+        <url>https://github.com/cotedm/common</url>
         <tag>HEAD</tag>
     </scm>
 
@@ -114,6 +114,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+            <groupId>external.atlassian.jgitflow</groupId>
+            <artifactId>jgitflow-maven-plugin</artifactId>
+            <version>1.0-m5.1</version>
+            <configuration>
+               <flowInitContext>
+                  <masterBranchName>master</masterBranchName>
+                  <featureBranchPrefix>feature-</featureBranchPrefix>
+                  <releaseBranchPrefix>release-</releaseBranchPrefix>
+                  <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
+                </flowInitContext>
+            </configuration>
+        </plugin>
         </plugins>
     </build>
 </project>
